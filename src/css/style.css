@@ -134,6 +134,10 @@ p {
   font-family: "Franklin_Medium";
   font-size: 28px;
   color: #fff;
+
+  -webkit-animation: coming 2s;
+  -o-animation: coming 2s;
+  animation: coming 2s;
 }
 
 .nav {
@@ -688,7 +692,14 @@ form div {
 }
 
 
-
+@keyframes coming {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
 
 
 
