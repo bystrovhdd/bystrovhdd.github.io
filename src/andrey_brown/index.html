@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/aos.css">
+    <title>Web development site</title>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="header">      
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__logo">Андрей Браун</div>
+              <nav class="nav" id="nav">
+              <a class="nav__link as" href="#">Обо мне</a>
+              <a class="nav__link" href="#">Услуги</a>
+              <a class="nav__link" href="#">Кейсы</a>
+              <a class="nav__link" href="#">Прайс</a>
+              <a class="nav__link" href="#">Отзывы</a>
+              <a class="nav__link" href="#">Контакты</a>
+            </nav>
+            <button class="burger" type="button" id="navToggle">
+              <span class="burger__line">1</span>
+              <span class="burger__line">2</span>
+              <span class="burger__line">3</span>
+              <span class="burger__line">4</span>
+            </button>
+          </div>
+        </div>      
+    </header>
+
+    <!-- Intro -->
+    <main class="intro">
+      <div class="container">
+        <div class="intro__title"  data-aos="fade-right">
+          <h1>Привет!<br>Я Андрей Браун</h1>
+          <h4>Фулл стек web разработчик</h4>
+          <a class="btn__transparent" href="#">Обо мне</a>
+          <a class="btn__transparent" href="#">Мои работы</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- About -->
+    <section class="about">
+      <div class="container">
+        <div class="about__content">
+          <h2 class="title__h2">Обо мне</h2>
+          <img class="about__img" src="img/auther.jpg" alt="auther">
+          <div class="about__text">
+            <p>
+              Lorem, ipsum dolor sit, amet consectetur adipisicing elit. 
+              Temporibus quasi non laudantium, eligendi ratione minus magni, 
+              magnam. Suscipit, culpa magni laudantium, 
+              ullam. Unde asperiores iusto, illo explicabo quibusdam.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit, amet consectetur adipisicing elit. 
+              Temporibus quasi non laudantium, eligendi ratione minus 
+              magni, magnam. Suscipit, doloribus amet culpa magni laudantium, 
+              ullam. Unde asperiores iusto, illo explicabo quibusdam.
+            </p>
+          </div>
+          <a class="about__btn" href="#">Скачать резюме</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section__skills">
+      <div class="container">
+        <h2 class="title__h2">Что я умею</h2>
+        <div class="skills__inner" data-aos="fade-up">
+          <div class="skills__item">
+            <img src="img/ico/notebook.png" alt="">
+            <h5>Веб дизайн</h5>
+            <div class="text">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quasi inventore vero perferendis.</p>
+            </div>
+          </div>
+          <div class="skills__item">
+            <img src="img/ico/notebook.png" alt="">
+            <h5>Разработка</h5>
+            <div class="text">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quasi inventore vero perferendis.</p>
+            </div>
+          </div>
+          <div class="skills__item">
+            <img src="img/ico/notebook.png" alt="">
+            <h5>СЕО-Оптимизация</h5>
+            <div class="text">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quasi inventore vero perferendis.</p>
+            </div>
+          </div>
+          <div class="skills__item">
+            <img src="img/ico/notebook.png" alt="">
+            <h5>Маркетинг</h5>
+            <div class="text">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quasi inventore vero perferendis.</p>
+            </div>
+          </div>
+        </div> <!-- /Skills__inner -->       
+      </div> <!-- /Container -->
+    </section>
+
+    <!-- Case -->
+    <section class="case">
+      <div class="container">
+        <div class="case__inner">
+          <h2 class="title__h2">Кейс</h2>
+          <p class="case__paragraph">Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Laudantium modi, assumenda voluptatem aut ea natus, saepe.</p>
+          <img class="case__img" src="img/application.jpg" alt="Изображение">
+        </div> <!-- /Case__inner -->
+
+        <div class="case__description">
+          <div class="case__title">
+                  Client:
+                  <p>Какая-то компания</p>
+                  Website:
+                  <p>https://somedomain.com</p>
+                  <input type="submit" value="VISIT LIVE SITE">
+              </div>
+          <div class="case__article">    		
+              Название проекта
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Placeat voluptatem velit alias nihil, libero<br> soluta quibusdam, excepturi debitis minima modi, dolor fugiat qui, consectetur nulla sequi inventore ut<br> dolorem ullam. Culpa fugiat voluptas, excepturi debitis minima, veniam nihil animi hic.</p>
+          </div>
+      </div> <!-- /Case__description -->
+      </div> <!-- /Container -->
+    </section>
+
+    <!-- Price -->
+    <section class="price">
+      <div class="container">
+        <div class="price__inner">
+          <h2 class="title__price">Расчет стоимости</h2>
+          <form class="form" action="/" method="post">
+            <div class="form__group">
+              <p class="form__paragraph">Тип сайта</p>
+                <select class="select__form" name="type" id="form__type">
+                    <option value selected disabled>Выберите пункт...</option>
+                    <option value="10">Сайт визитка</option>
+                    <option value="20">Лендинг</option>
+                    <option value="30">Интернет магазин</option>
+                    <option value="40">Корпоративный</option>
+                </select>
+            </div><!-- /form__group-->
+            <div class="form__group">
+              <p class="form__paragraph">Дизайн</p>
+                <select class="select__form" name="design" id="form__design">
+                    <option value selected disabled>Выберите пункт...</option>
+                    <option value="10">Светлый</option>
+                    <option value="20">Темный</option>
+                    <option value="30">Светло-темный</option>
+                </select>
+            </div><!-- /form__group-->
+            <div class="form__group">
+              <p class="form__paragraph">Адаптивность</p>
+                <select class="select__form" name="adaptation" id="form__adaptation">
+                    <option value selected disabled>Выберите пункт...</option>
+                    <option value="10">Да</option>
+                    <option value="20">Нет</option>   			
+                </select>
+            </div><!-- /form__group-->
+            <div class="cost">
+              <div class="timeing__site">Сроки <span>0</span></div>
+              <div class="price__site">Стоимость <span>0</span></div>
+            </div>
+            <a class="btn__green" href="#">Оставить заявку</a>
+          </form>
+        </div><!-- /Price__inner -->        
+      </div><!-- /Container -->
+    </section>
+
+    <!-- Statistics -->
+    <section class="statistics">
+      <div class="container">
+        <h2 class="title__h2">Немного статистики</h2>
+        <div class="statistics__inner" data-aos="fade-up">
+
+          <div class="statistics__item">
+            <img class="statistics__img" src="./img/ico/smile.png" alt="смайл">
+            <div>120</div>
+            <p>Счастливых клиентов</p>
+          </div>
+          <div class="statistics__item">
+            <img class="statistics__img" src="./img/ico/sign01.png" alt="скобки">
+            <div>4,600</div>
+            <p>Часов работы</p>
+          </div>
+          <div class="statistics__item">
+            <img class="statistics__img" src="./img/ico/jackdaw.png" alt="галочка">
+            <div>340</div>
+            <p>Проектов завершено</p>
+          </div>
+          <div class="statistics__item">
+            <img class="statistics__img" src="./img/ico/cup.png" alt="кубок">
+            <div>23</div>
+            <p>Наград получено</p>
+          </div>
+
+        </div><!-- /statistics__inner -->
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+      <div class="container">
+        <h2 class="title__h2">Отзывы</h2>
+         <img class="reviews__img" src="img/reviews.jpg" alt="фото">
+          <div class="reviews__text">
+            <p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Ea quis facere labore<br> porro amet eaque sed a dolorem harum voluptas.</p>
+            <p><span>Михаил,</span> Ген директор ПАО “Газпром”.</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Contacts -->
+  <footer class="contacts">
+    <div class="footer__contacts">
+      <div class="container">
+        <h2 class="title__h2 title--white">Мои контакты</h2>
+        <p class="subtitle__contacts">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo.</p>
+        <div class="contacts__inner">
+          <div class="contacts__item">
+              <img src="./img/ico/gps.png" alt="GEO">
+              <p class="contacts__location">Санкт-Петербург Невский проспект 11</p>
+          </div>
+          <div class="contacts__item">
+              <img src="./img/ico/mail.png" alt="email">
+              <a class="contacts-link" href="mailto:info@companyname.com"><p>info@companyname.com</p></a>
+          </div>
+          <div class="contacts__item">
+              <img src="./img/ico/phone.png" alt="phone">
+              <a class="contacts-link" href="tel:+79999999999"><p>+7 999 999-99-99</p></a>
+          </div>
+        </div><!--/contacts__inner -->
+        <form class="contacts__message" action="/">
+          <div>Оставте мне сообщение</div>
+          <div class="input__text">
+              <input class="input__form" type="text" placeholder="Имя">
+              <input class="input__form" type="email" placeholder="Email">
+          </div>
+          <textarea class="textarea__text" name="text" placeholder="Сообщение"></textarea>
+          <input class="input__contacts" type="submit" value="Отправить">
+        </form>
+        <!-- <div class="contacts__social">
+          <a href="#" target="_blank"><img class="img__ico" src="" alt="facebook"></a>
+          <a href="#" target="_blank"><img class="img__ico" src="img/ico/footer/Twitter_icon-icons.com_66803.svg" alt="twitter"></a>
+          <a href="#" target="_blank"><img class="img__ico" src="img/ico/footer/volleyball-ball-outline_icon-icons.com_54074.svg" alt="мяч"></a>
+          <a href="#" target="_blank"><img class="img__ico" src="img/ico/footer/github-logo_icon-icons.com_73546.svg" alt="github"></a>
+          <a href="#" target="_blank"><img class="img__ico" src="img/ico/footer/instagram-symbol_icon-icons.com_73522.svg" alt="instagram"></a>
+          <a href="#" target="_blank"><img class="img__ico" src="img/ico/footer/linked_in_online_social_media_icon-icons.com_71877.svg" alt="in"></a>
+      </div> -->
+      </div><!--/container -->
+    </div><!--/footer__contacts -->
+    <div class="footer__map">
+      <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce8c5f0d8c6e9d79bd45f39fc7609df4ac2ab4d83c93dac46f8e3b2dd2341c0&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div><!--/footer__map -->
+    <div class="copyright">Copyright © 2021 Андрей Браун. Design by Web</div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.slim.min.js'></script>
+  <script src="js/aos.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/price.js"></script>
+
+  </body>
+</html>
