@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/slick.css">
+    
     <title>Web development site</title>
   </head>
-  <body>
+  <body id="body" class="">
 
     <!-- Header -->
     <header class="header">      
@@ -16,12 +18,12 @@
           <div class="header__inner">
             <div class="header__logo">Андрей Браун</div>
               <nav class="nav" id="nav">
-              <a class="nav__link as" href="#">Обо мне</a>
-              <a class="nav__link" href="#">Услуги</a>
-              <a class="nav__link" href="#">Кейсы</a>
-              <a class="nav__link" href="#">Прайс</a>
-              <a class="nav__link" href="#">Отзывы</a>
-              <a class="nav__link" href="#">Контакты</a>
+              <a class="nav__link active" href="#" data-scroll="#about">Обо мне</a>
+              <a class="nav__link" href="#" data-scroll="#services">Услуги</a>
+              <a class="nav__link" href="#" data-scroll="#case">Кейсы</a>
+              <a class="nav__link" href="#" data-scroll="#price">Прайс</a>
+              <a class="nav__link" href="#" data-scroll="#reviews">Отзывы</a>
+              <a class="nav__link" href="#" data-scroll="#contacts">Контакты</a>
             </nav>
             <button class="burger" type="button" id="navToggle">
               <span class="burger__line">1</span>
@@ -46,7 +48,7 @@
     </main>
 
     <!-- About -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__content">
           <h2 class="title__h2">Обо мне</h2>
@@ -71,7 +73,7 @@
     </section>
 
     <!-- Skills -->
-    <section class="section__skills">
+    <section class="section__skills" id="services">
       <div class="container">
         <h2 class="title__h2">Что я умею</h2>
         <div class="skills__inner" data-aos="fade-up">
@@ -108,12 +110,28 @@
     </section>
 
     <!-- Case -->
-    <section class="case">
+    <section class="case" id="case">
       <div class="container">
         <div class="case__inner">
           <h2 class="title__h2">Кейс</h2>
           <p class="case__paragraph">Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Laudantium modi, assumenda voluptatem aut ea natus, saepe.</p>
-          <img class="case__img" src="img/application.jpg" alt="Изображение">
+          
+          
+
+          <div class="sim-slider">
+            <ul class="sim-slider-list">
+              <li><img class="img__slide" src="img/slider/cat.jpg" alt="screen"></li> 
+              <li class="sim-slider-element"><img class="img__slide" src="img/slider/application.jpg" alt="0"></li>
+              <li class="sim-slider-element"><img class="img__slide" src="img/slider/cat.jpg" alt="1"></li>
+              <li class="sim-slider-element"><img class="img__slide" src="img/slider/world.jpg" alt="2"></li>              
+            </ul>
+            <div class="sim-slider-arrow-left"></div>
+            <div class="sim-slider-arrow-right"></div>
+            <div class="sim-slider-dots"></div>
+          </div>
+
+
+
         </div> <!-- /Case__inner -->
 
         <div class="case__description">
@@ -134,18 +152,18 @@
     </section>
 
     <!-- Price -->
-    <section class="price">
+    <section class="price" id="price">
       <div class="container">
         <div class="price__inner">
           <h2 class="title__price">Расчет стоимости</h2>
-          <form class="form" action="/" method="post">
+          <form class="form" name="main" action="/" method="post">
             <div class="form__group">
               <p class="form__paragraph">Тип сайта</p>
                 <select class="select__form" name="type" id="form__type">
                     <option value selected disabled>Выберите пункт...</option>
-                    <option value="10">Сайт визитка</option>
+                    <option value="10">Визитка</option>
                     <option value="20">Лендинг</option>
-                    <option value="30">Интернет магазин</option>
+                    <option value="30">Интернет-магазин</option>
                     <option value="40">Корпоративный</option>
                 </select>
             </div><!-- /form__group-->
@@ -153,9 +171,9 @@
               <p class="form__paragraph">Дизайн</p>
                 <select class="select__form" name="design" id="form__design">
                     <option value selected disabled>Выберите пункт...</option>
-                    <option value="10">Светлый</option>
-                    <option value="20">Темный</option>
-                    <option value="30">Светло-темный</option>
+                    <option value="10">Уникальный</option>
+                    <option value="20">Шаблонный</option>
+                    <option value="30">FLAT</option>
                 </select>
             </div><!-- /form__group-->
             <div class="form__group">
@@ -167,60 +185,90 @@
                 </select>
             </div><!-- /form__group-->
             <div class="cost">
-              <div class="timeing__site">Сроки <span>0</span></div>
-              <div class="price__site">Стоимость <span>0</span></div>
+              <div class="timeing__site">Сроки <span id="devTime">0</span></div>
+              <div class="price__site">Стоимость <span id="priceWork">0</span></div>
             </div>
+            <button type="button" id="btn" class="btn__green">Рассчитать</button>
             <a class="btn__green" href="#">Оставить заявку</a>
           </form>
         </div><!-- /Price__inner -->        
       </div><!-- /Container -->
     </section>
-
+    
     <!-- Statistics -->
     <section class="statistics">
       <div class="container">
         <h2 class="title__h2">Немного статистики</h2>
         <div class="statistics__inner" data-aos="fade-up">
-
+          
           <div class="statistics__item">
             <img class="statistics__img" src="./img/ico/smile.png" alt="смайл">
-            <div>120</div>
+            <div class="firstNumber">0</div>
             <p>Счастливых клиентов</p>
           </div>
           <div class="statistics__item">
             <img class="statistics__img" src="./img/ico/sign01.png" alt="скобки">
-            <div>4,600</div>
+            <div class="secondNumber">0</div>
             <p>Часов работы</p>
           </div>
           <div class="statistics__item">
             <img class="statistics__img" src="./img/ico/jackdaw.png" alt="галочка">
-            <div>340</div>
+            <div class="thirdNumber">0</div>
             <p>Проектов завершено</p>
           </div>
           <div class="statistics__item">
             <img class="statistics__img" src="./img/ico/cup.png" alt="кубок">
-            <div>23</div>
+            <div class="fourthNumber">0</div>
             <p>Наград получено</p>
           </div>
-
         </div><!-- /statistics__inner -->
       </div>
     </section>
-
     <!-- Reviews -->
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="container">
-        <h2 class="title__h2">Отзывы</h2>
-         <img class="reviews__img" src="img/reviews.jpg" alt="фото">
-          <div class="reviews__text">
-            <p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Ea quis facere labore<br> porro amet eaque sed a dolorem harum voluptas.</p>
-            <p><span>Михаил,</span> Ген директор ПАО “Газпром”.</p>
-          </div>
-      </div>
+        <h2 class="title__h2 reviews--down">Отзывы</h2>       
+        
+          <div class="reviews__inner" id="reviewsSlider">
+              <div>
+                <img class="reviews__photo" src="img/reviews/miha.jpg" alt="">       
+                <div class="reviews__text">
+                  <p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Ea quis facere labore<br> porro amet eaque sed a dolorem harum voluptas.</p>
+                  <p><span>Михаил,</span> Ген директор ПАО “Газпром”.</p>
+                </div>
+              </div>
+
+              <div>                   
+                <img class="reviews__photo" src="img/reviews/dima.jpg" alt="">
+                <div class="reviews__text">
+                  <p>Ea quis facere labore porro amet eaque sed a dolorem harum voluptas.<br> ipsum, dolor sit amet consectetur adipisicing elit. Ea quis</p>
+                  <p><span>Дмитрий,</span> Системный администратор "Vkontacte".</p>
+                </div>                
+              </div>
+
+              <div>                   
+                <img class="reviews__photo" src="img/reviews/alena.png" alt="">   
+                <div class="reviews__text">
+                  <p>Lorem, dolor sit amet consectetur adipisicing elit. Ea quis facere labore<br> porro amet eaque a dolorem harum voluptas.</p>
+                  <p><span>Алена,</span> Game дизайнер “Valve”.</p>
+                </div>                
+              </div>
+
+          </div><!-- /.reviews -->      
+      </div><!-- /.container -->
+    </div>
   </section>
 
+
+
+  
+  
+
+
+
+
   <!-- Contacts -->
-  <footer class="contacts">
+  <footer class="contacts" id="contacts">
     <div class="footer__contacts">
       <div class="container">
         <h2 class="title__h2 title--white">Мои контакты</h2>
@@ -259,16 +307,28 @@
       </div><!--/container -->
     </div><!--/footer__contacts -->
     <div class="footer__map">
-      <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce8c5f0d8c6e9d79bd45f39fc7609df4ac2ab4d83c93dac46f8e3b2dd2341c0&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
+     <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce8c5f0d8c6e9d79bd45f39fc7609df4ac2ab4d83c93dac46f8e3b2dd2341c0&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
     </div><!--/footer__map -->
     <div class="copyright">Copyright © 2021 Андрей Браун. Design by Web</div>
   </footer>
 
+  <!-- Modal -->
+  <div id="bg_popup">
+    <div id="popup">
+      <div class="modal__title">Получи скидку в 10%</div>
+      <p class="modal__text">При оформлении заказа сайта в поле промокод ввидите: <span class="sale10">SALE10</span> и получи скидку 10 процентов</p>
+      <a class="close" href="#" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none'; return false;"></a>
+    </div>
+  </div>  
+
   <!-- JavaScript -->
-  <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.slim.min.js'></script>
+  <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js'></script>
   <script src="js/aos.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/price.js"></script>
-
+  <script src="js/popup.js"></script>
+  <script src="js/slider.js"></script>
+ <script src="js/timer.js"></script>
   </body>
 </html>

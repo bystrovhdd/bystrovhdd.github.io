@@ -1,6 +1,15 @@
-const type = prompt('Введите тип сайта(визитка +2000, лендинг +2500, интернет-магазин +7000)').trim().toLowerCase()
-const design = prompt('Введите дизайн сайта(уникальный +3000, шаблонный +1000, flat +2200)').trim().toLowerCase()
-const adaptive = prompt('Выберите вариант ответа(численный) с адаптацией сайта +3000 - 1  или без - 0 ').trim().toLowerCase()
+let btn = document.getElementById('btn')
+
+const mainForm = document.forms.main
+const mainFormSelectType = mainForm.type
+const mainFormSelectDesign = mainForm.design
+const mainFormSelectAdaptation = mainForm.adaptation
+let mainFormSelectTypeValue
+let mainFormSelectDesignValue
+let mainFormSelectAdaptationValue
+
+let devTime = document.getElementById('devTime')
+let priceWork = document.getElementById('priceWork')
 
 let time = [
     [2, 4, 12],
@@ -12,31 +21,40 @@ let resultType = []
 let resulteDesign = []
 let resulteAdaptive = []
 
-function calculate(){    
-    if(type === 'визитка') {
+btn.addEventListener('click', function(){    
+    if((mainFormSelectTypeValue = mainFormSelectType.value) == 10) {
+        resultType = []
         resultType.push(2000, time[0][0])
-    } else if(type === 'лендинг') {
+    } else if((mainFormSelectTypeValue = mainFormSelectType.value) == 20) {
+        resultType = []
         resultType.push(2500, time[0][1])
-    } else {
+    } else if((mainFormSelectTypeValue = mainFormSelectType.value) == 30){
+        resultType = []
         resultType.push(7000, time[0][2])
-    }    
+    } 
     
-    if(design === 'уникальный') {
+    if((mainFormSelectDesignValue = mainFormSelectDesign.value) == 10 ) {
+        resulteDesign = []
         resulteDesign.push(3000, time[1][0])
-    } else if(design === 'шаблонный') {
+    } else if((mainFormSelectDesignValue = mainFormSelectDesign.value) == 20 ) {
+        resulteDesign = []
         resulteDesign.push(1000, time[1][1])
-    } else {
+    } else if((mainFormSelectDesignValue = mainFormSelectDesign.value) == 30 ){
+        resulteDesign = []
         resulteDesign.push(2200, time[1][2])
     }
     
-    if(adaptive === '1') {
-        resulteAdaptive.push('адаптивный', 3000, time[2][0])
-    } else {
-        resulteAdaptive.push('не адаптивный', 0, time[2][1])
+    if((mainFormSelectAdaptationValue = mainFormSelectAdaptation.value) == 10) {
+        resulteAdaptive = []
+        resulteAdaptive.push(3000, time[2][0])
+    } else if((mainFormSelectAdaptationValue = mainFormSelectAdaptation.value) == 20){
+        resulteAdaptive = []
+        resulteAdaptive.push(0, time[2][1])
     }
-    
-    let result = `Вы выбрали опции: ${type} ${design} ${resulteAdaptive[0]}, Срок разработки: ${resultType[1] + resulteDesign[1] + resulteAdaptive[2]} суток, Общая стоимость: ${resultType[0] + resulteDesign[0] + resulteAdaptive[1]}`
-    return alert(result)
-}
+        
+    let result = resultType[0]
+    devTime.textContent = resultType[1] + resulteDesign[1] + resulteAdaptive[1]
+    priceWork.textContent = resultType[0] + resulteDesign[0] + resulteAdaptive[0]
 
-calculate()
+    console.log(result)
+})
