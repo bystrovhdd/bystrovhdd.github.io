@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     
     <title>Web development site</title>
   </head>
-  <body id="body" class="">
+  <body id="body">
 
     <!-- Header -->
     <header class="header">      
         <div class="container">
           <div class="header__inner">
-            <div class="header__logo">Андрей Браун</div>
+            <div class="header__logo animate__animated animate__pulse">Ярослав Быстров</div>
               <nav class="nav" id="nav">
               <a class="nav__link active" href="#" data-scroll="#about">Обо мне</a>
               <a class="nav__link" href="#" data-scroll="#services">Услуги</a>
@@ -39,9 +41,9 @@
     <main class="intro">
       <div class="container">
         <div class="intro__title"  data-aos="fade-right">
-          <h1>Привет!<br>Я Андрей Браун</h1>
-          <h4>Фулл стек web разработчик</h4>
-          <a class="btn__transparent" href="#">Обо мне</a>
+          <h1>Привет!<br>Я Ярослав Быстров</h1>
+          <h4>Full stack web разработчик</h4>
+          <a class="btn__transparent" href="#" data-scroll="#about">Обо мне</a>
           <a class="btn__transparent" href="#">Мои работы</a>
         </div>
       </div>
@@ -52,7 +54,7 @@
       <div class="container">
         <div class="about__content">
           <h2 class="title__h2">Обо мне</h2>
-          <img class="about__img" src="img/auther.jpg" alt="auther">
+          <img class="about__img" src="img/12.jpg" data-src="img/12.jpg" alt="auther">
           <div class="about__text">
             <p>
               Lorem, ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -85,21 +87,21 @@
             </div>
           </div>
           <div class="skills__item">
-            <img src="img/ico/notebook.png" alt="">
+            <img src="img/ico/sign.png" alt="">
             <h5>Разработка</h5>
             <div class="text">
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quasi inventore vero perferendis.</p>
             </div>
           </div>
           <div class="skills__item">
-            <img src="img/ico/notebook.png" alt="">
+            <img src="img/ico/gramophone.png" alt="">
             <h5>СЕО-Оптимизация</h5>
             <div class="text">
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quasi inventore vero perferendis.</p>
             </div>
           </div>
           <div class="skills__item">
-            <img src="img/ico/notebook.png" alt="">
+            <img src="img/ico/space-x.png" alt="">
             <h5>Маркетинг</h5>
             <div class="text">
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Quasi inventore vero perferendis.</p>
@@ -115,21 +117,21 @@
         <div class="case__inner">
           <h2 class="title__h2">Кейс</h2>
           <p class="case__paragraph">Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Laudantium modi, assumenda voluptatem aut ea natus, saepe.</p>
-          
-          
+                 
+          <div class="case__slider" id="caseSlider">
+            <div>
+              <a href="img/slider/application.jpg" target="_blank"><img class="img__slide" src="img/slider/application-min.jpg" data-src="img/slider/application.jpg" alt=""></a>
+            </div>
 
-          <div class="sim-slider">
-            <ul class="sim-slider-list">
-              <li><img class="img__slide" src="img/slider/cat.jpg" alt="screen"></li> 
-              <li class="sim-slider-element"><img class="img__slide" src="img/slider/application.jpg" alt="0"></li>
-              <li class="sim-slider-element"><img class="img__slide" src="img/slider/cat.jpg" alt="1"></li>
-              <li class="sim-slider-element"><img class="img__slide" src="img/slider/world.jpg" alt="2"></li>              
-            </ul>
-            <div class="sim-slider-arrow-left"></div>
-            <div class="sim-slider-arrow-right"></div>
-            <div class="sim-slider-dots"></div>
+            <div>                   
+              <a href="img/slider/cat.jpg" target="_blank"><img class="img__slide" src="img/slider/cat.jpg" data-src="img/slider/cat.jpg" alt=""></a>               
+            </div>
+
+            <div>                   
+              <a href="img/slider/world.jpg" target="_blank"><img class="img__slide" src="img/slider/world.jpg" data-src="img/slider/world.jpg" alt=""></a>                          
+            </div>
+
           </div>
-
 
 
         </div> <!-- /Case__inner -->
@@ -224,12 +226,13 @@
         </div><!-- /statistics__inner -->
       </div>
     </section>
+
     <!-- Reviews -->
     <section class="reviews" id="reviews">
       <div class="container">
         <h2 class="title__h2 reviews--down">Отзывы</h2>       
         
-          <div class="reviews__inner" id="reviewsSlider">
+          <div class="reviews__slider" id="reviewsSlider">
               <div>
                 <img class="reviews__photo" src="img/reviews/miha.jpg" alt="">       
                 <div class="reviews__text">
@@ -252,19 +255,13 @@
                   <p>Lorem, dolor sit amet consectetur adipisicing elit. Ea quis facere labore<br> porro amet eaque a dolorem harum voluptas.</p>
                   <p><span>Алена,</span> Game дизайнер “Valve”.</p>
                 </div>                
-              </div>
+              </div>              
 
-          </div><!-- /.reviews -->      
+          </div><!-- /.reviews -->
+          
       </div><!-- /.container -->
     </div>
   </section>
-
-
-
-  
-  
-
-
 
 
   <!-- Contacts -->
@@ -295,6 +292,7 @@
           </div>
           <textarea class="textarea__text" name="text" placeholder="Сообщение"></textarea>
           <input class="input__contacts" type="submit" value="Отправить">
+          <button class="input__contacts" data-modal="#modalFeedback">Обратная связь</button>      
         </form>
         <!-- <div class="contacts__social">
           <a href="#" target="_blank"><img class="img__ico" src="" alt="facebook"></a>
@@ -307,28 +305,72 @@
       </div><!--/container -->
     </div><!--/footer__contacts -->
     <div class="footer__map">
-     <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce8c5f0d8c6e9d79bd45f39fc7609df4ac2ab4d83c93dac46f8e3b2dd2341c0&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
+      <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js'></script>
+     <!-- <script class="map" type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7ce8c5f0d8c6e9d79bd45f39fc7609df4ac2ab4d83c93dac46f8e3b2dd2341c0&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script> -->
     </div><!--/footer__map -->
     <div class="copyright">Copyright © 2021 Андрей Браун. Design by Web</div>
   </footer>
 
-  <!-- Modal -->
-  <div id="bg_popup">
+
+
+  <!-- Modals -->
+  <div class="modal" id="modalFeedback">
+    <div class="modal__inner">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h4 class="modal__title">Обратная связь</h4>
+                <div class="modal__text">
+                    <p>Пожалуйста заполните все поля.</p>
+                </div>
+            </div>
+
+            <form class="formModal" action="php/mail.php" method="post">
+                <div class="modal__group" required> 
+                    <input class="input  input--dark  input--phone" name="user-phone" id="modalPhone" type="phone" required placeholder="Ваш телефон">
+                </div>                
+                <div class="modal__group">
+                    <input class="input  input--dark  input--email" name="user-mail" id="modalMail" type="email" required placeholder="Ваш email">
+                </div>
+                <button class="btn__modal" type="submit">Отправить</button> 
+                <!-- <input type="button" value="Отправить">                  -->
+            </form>
+
+            <div class="modal__footer">
+                <h4 class="modal__footer-title">Наши контакты</h4>
+                <address class="modal__contacts">
+                    <p>New York, Street, ZIP code</p>
+                    <p>Телефон: <a href="tel:+79455312378">+7-945-531-23-78</a></p>
+                    <p>E-mail: <a href="mailto:bystrovslav@mail.ru">bystrovslav@mail.ru</a></p>
+                </address>
+            </div>
+
+            <button class="modal__close" type="button" data-modal-close>
+              <img src="img/ico/close.svg" alt="Close">
+            </button>
+            
+        </div><!-- /.modal__content -->
+    </div><!-- /.modal__inner -->
+</div><!-- /.modal -->
+
+
+
+  <!-- Sale -->
+  <!-- <div id="bg_popup">
     <div id="popup">
       <div class="modal__title">Получи скидку в 10%</div>
       <p class="modal__text">При оформлении заказа сайта в поле промокод ввидите: <span class="sale10">SALE10</span> и получи скидку 10 процентов</p>
       <a class="close" href="#" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none'; return false;"></a>
     </div>
-  </div>  
+  </div>   -->
 
-  <!-- JavaScript -->
-  <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js'></script>
+  <!-- JavaScript -->  
   <script src="js/aos.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/price.js"></script>
-  <script src="js/popup.js"></script>
-  <script src="js/slider.js"></script>
- <script src="js/timer.js"></script>
+  <!-- <script src="js/popup.js"></script> -->
+  <script src="js/animation.js"></script>
+  <script src="js/img.js"></script>
+  <script src="js/maskedinput.min.js"></script>
   </body>
 </html>

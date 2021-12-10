@@ -1,4 +1,4 @@
-let delay_popup = 10000
+let delay_popup = 1000000000
 let body = document.getElementById('body')
 let close = document.querySelector('.close')
 

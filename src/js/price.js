@@ -52,9 +52,7 @@ btn.addEventListener('click', function(){
         resulteAdaptive.push(0, time[2][1])
     }
         
-    let result = resultType[0]
+    
     devTime.textContent = resultType[1] + resulteDesign[1] + resulteAdaptive[1]
     priceWork.textContent = resultType[0] + resulteDesign[0] + resulteAdaptive[0]
-
-    console.log(result)
 })

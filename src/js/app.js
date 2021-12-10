@@ -31,7 +31,8 @@ $(function(){
     
 
 
-    /* Reviews Slider */
+    /* Reviews Slider 
+    =======================================*/
     let reviewsSlider = $("#reviewsSlider");
 
     reviewsSlider.slick({
@@ -44,8 +45,53 @@ $(function(){
     });
 
 
+    let caseSlider = $("#caseSlider");
 
+    caseSlider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        speed: 500,
+        
+    });
+
+
+    /* Modal
+    =======================================*/
+   $('[data-modal]').on('click', function(event) {
+       event.preventDefault();
+
+       let modal = $(this).data('modal');
+       console.log(modal);
+
+       $('body').addClass('no-scroll');
+       $(modal).addClass('show');
+   });
+
+   $('[data-modal-close]').on('click', function(event) {
+       event.preventDefault();
+       let modal = $(this).parents('.modal');
+
+       $('body').removeClass('no-scroll');
+       modal.removeClass('show')
+   });
+
+   $("#modalPhone").mask("+7(999) 999-9999");
    
 
-})
+
+    $('form').submit(function(event){
+        if($("#modalPhone").val() == "" || $("#modalMail").val() == "") {
+            event.preventDefault();
+	        alert("Введите телефон или email")
+        } else if($("#modalMail").val() == !"@") {
+            alert("Это не похоже на email")
+        }
+    });
+
+    
+
+});
 
