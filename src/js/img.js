@@ -34,6 +34,7 @@ function onInput(input){
     input.forEach(change => {
         if (change.isIntersecting){
             change.target.src = change.target.dataset.src
+            console.log(change.isIntersecting)
         }
     })
 }
